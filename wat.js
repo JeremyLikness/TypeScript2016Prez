@@ -7,7 +7,7 @@
         '[] - {}',
         'Array(5).join("Cool")',
         'Array(5).join("Cool" + 1)',
-        'Array(5).join("Cool" - 1)'
+        '"BA" + Array(2).join("Cool" - 1) + "A"'
     ], idx, result;
     
     console.log('Wat?!');
