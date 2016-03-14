@@ -1,3 +1,22 @@
+// either or (union types)
+var numOrStr: number | string; 
+numOrStr = 1; // fine 
+numOrStr = "1"; // also fine 
+//numOrStr = false; // <-- not good 
+
+// intersection 
+var nameValue: { key: number } & { value: string };
+nameValue.key = 1; 
+nameValue.value = "test"; 
+
+var notPossible: number & string; 
+// now I can't assign anything! 
+
+// custom types
+type NameValuePair = { key: number, value: string};
+var entry: NameValuePair = { key: 1, value: "foo" };
+
+// complex example 
 interface IManipulator {
     (input: string): string;
 }
