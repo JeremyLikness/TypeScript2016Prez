@@ -32,3 +32,28 @@ function debugController(ctrl: Controller): void {
 var myCtrl = new Controller(5);
 debugController(myCtrl);
 
+module MyModule { // <-- export to make available outside of this file
+    
+    class InternalClass {
+        internal(): string {
+            return "Internal";
+        }
+    }
+    
+    export class MyClass {
+        echo(msg: string): string {
+            return msg;
+        }
+    }
+    
+    var internalClass = new InternalClass(); 
+    console.log(internalClass.internal());
+    
+    var myClass = new MyClass();
+    console.log(myClass.echo("Inside the module."));
+}
+
+//var externalClass = new MyModule.InternalClass(); // <-- can't do it, not exported
+var exportedClass = new MyModule.MyClass();
+console.log(exportedClass.echo("Outside the module."));
+
