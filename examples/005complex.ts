@@ -5,9 +5,10 @@ numOrStr = "1"; // also fine
 //numOrStr = false; // <-- not good 
 
 // intersection 
-var nameValue: { key: number } & { value: string };
-nameValue.key = 1; 
-nameValue.value = "test"; 
+var nameValue: { key: number } & { value: string } = { 
+    key: 1,
+    value: 'test'
+};
 
 var notPossible: number & string; 
 // now I can't assign anything! 
