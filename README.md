@@ -1,6 +1,8 @@
 # TypeScript2016Prez
 Presentation covering thet latest (1.8.x) version of TypeScript with examples and deck.
 
+## [Click here to watch the 1-hour webinar](http://csharperimage.jeremylikness.com/2016/03/typescript-18-to-future-proof.html)
+
 ## Run the examples 
 
 Navigate to the parent directory where you want to clone the examples.
